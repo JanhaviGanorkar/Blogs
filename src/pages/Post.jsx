@@ -21,7 +21,7 @@ export default function Post() {
                 else navigate("/");
             });
         } else navigate("/");
-    }, [slug, navigate]);
+    }, [slug]);
 
     const deletePost = () => {
         appwriteService.deletePost(post.$id).then((status) => {
